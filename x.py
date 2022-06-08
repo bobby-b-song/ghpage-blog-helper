@@ -22,6 +22,7 @@ def parse_md(files: List[str]) -> str:
 
     for file in files:
         s += '### [' + file.split('/')[-1] + f']({file}) \n'
+        s += '#### Preview: ' + '\n\n'
         with open(file, mode='r') as f:
             s += unmark(f.read()[:config.DESC_LENGTH]) + '\n'
     
