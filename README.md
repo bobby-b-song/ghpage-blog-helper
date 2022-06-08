@@ -1,4 +1,4 @@
-# Basicly a github page helper that allows you to create you blog using it
+# A Tool that allows you to build your blog using Github Pages
 
 ## Usage
 Press Use This template
