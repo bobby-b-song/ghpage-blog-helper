@@ -40,7 +40,8 @@ def push():
     articles = get_article()
     parsed = parse_md(articles)
     write_index(parsed)
-    os.system('git commit -a')
+    os.system('git add .')
+    os.system('git commit -a -m "Updated Blog"')
     os.system('git push')
 
 
