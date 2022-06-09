@@ -22,13 +22,13 @@ def parse_md(files: List[str]) -> str:
 
     for file in files:
         s += '### [' + file.split('/')[-1] + f']({file}) \n'
-        s += '#### Preview: ' + '\n\n'
+        s += '#### Preview: '+'\n\n'
         with open(file, mode='r') as f:
             s += unmark(f.read()[:config.DESC_LENGTH]) + '\n'
-    
+
     s += "\n"
     s += config.FOOTER + "\n"
-    
+
     return s
 
 
@@ -39,6 +39,7 @@ def write_index(s: str) -> None:
 
 def push():
     articles = get_article()
+    sorted(articles, key=lambda x: os.path.getmtime(x), reverse=True)
     parsed = parse_md(articles)
     write_index(parsed)
     os.system('git add .')
