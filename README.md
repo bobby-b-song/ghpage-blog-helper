@@ -15,4 +15,6 @@ Write the following in your commandline
 
 ## Demo
 
+Please also view the tweaks that you can make at there.
+
 My personal blog: https://sbihere.github.io/
